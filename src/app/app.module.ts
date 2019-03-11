@@ -10,6 +10,7 @@ import { MessagesComponent } from './messages/messages.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { D3BaseComponent } from './d3-base/d3-base.component';
 import {MatCardModule} from '@angular/material/card';
+import { TsExampleComponent } from './ts-example/ts-example.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import {MatCardModule} from '@angular/material/card';
     HeroDetailComponent,
     MessagesComponent,
     DashboardComponent,
-    D3BaseComponent
+    D3BaseComponent,
+    TsExampleComponent
   ],
   imports: [
     BrowserModule,
