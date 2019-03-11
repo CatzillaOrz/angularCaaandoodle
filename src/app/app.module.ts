@@ -9,8 +9,7 @@ import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 import { MessagesComponent } from './messages/messages.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { D3BaseComponent } from './d3-base/d3-base.component';
-import {MatCardModule} from '@angular/material/card';
-import { TsExampleComponent } from './ts-example/ts-example.component';
+import {TsTempModule} from './practice-demo/ts-temp/ts-temp.module';
 
 
 @NgModule({
@@ -20,14 +19,13 @@ import { TsExampleComponent } from './ts-example/ts-example.component';
     HeroDetailComponent,
     MessagesComponent,
     DashboardComponent,
-    D3BaseComponent,
-    TsExampleComponent
+    D3BaseComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    MatCardModule
+    TsTempModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
