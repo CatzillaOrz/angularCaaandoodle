@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MessageService } from '../message.service';
 import { Truck, Accessory, Engine } from '../practice-demo/classExtention';
 
 @Component({
@@ -7,9 +8,10 @@ import { Truck, Accessory, Engine } from '../practice-demo/classExtention';
   styleUrls: ['./ts-example.component.scss']
 })
 export class TsExampleComponent implements OnInit {
-  constructor() {}
+  constructor(public messageService: MessageService) {}
 
   ngOnInit() {
+    this.messageService.clear();
     // Ref to ../practice-demo/classExtention
     // window.onload = function () {
     var truck = new Truck(
