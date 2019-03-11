@@ -9,6 +9,7 @@ import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 import { MessagesComponent } from './messages/messages.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { D3BaseComponent } from './d3-base/d3-base.component';
+// import { PracticeDemoComponent } from './practice-demo/practice-demo.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { D3BaseComponent } from './d3-base/d3-base.component';
     HeroDetailComponent,
     MessagesComponent,
     DashboardComponent,
-    D3BaseComponent
+    D3BaseComponent,
+    // PracticeDemoComponent
   ],
   imports: [
     BrowserModule,
