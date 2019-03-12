@@ -49,3 +49,10 @@
   margin-right: .8em;
   border-radius: 4px 0 0 4px;
 }
+.heroes li.selected {
+  background-color: #CFD8DC;
+  color: white;
+}
+.heroes li.selected:hover {
+  background-color: #BBD8DC;
+}
