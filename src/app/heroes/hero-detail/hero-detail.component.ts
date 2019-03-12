@@ -1,9 +1,9 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Hero } from '../hero';
-import { ActivatedRoute } from '@angular/router';
+import { Hero } from '../../heroes/hero';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Location } from '@angular/common';
 
-import { HeroService } from '../hero.service';
+import { HeroService } from '../../heroes/hero.service';
 @Component({
   selector: 'app-hero-detail',
   templateUrl: './hero-detail.component.html',
@@ -14,6 +14,7 @@ export class HeroDetailComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private heroService: HeroService,
+    private router: Router,
     private location: Location
   ) {}
 
@@ -25,6 +26,13 @@ export class HeroDetailComponent implements OnInit {
     const id = +this.route.snapshot.paramMap.get('id');
     this.heroService.getHero(id)
       .subscribe(hero => this.hero = hero);
+  }
+  gotoHeroes(hero: Hero) {
+    let heroId = hero ? hero.id : null;
+    // Pass along the hero id if available
+    // so that the HeroList component can select that hero.
+    // Include a junk 'foo' property for fun.
+    this.router.navigate(['/heroes', { id: heroId, foo: 'foo' }]);
   }
 
   goBack(): void {

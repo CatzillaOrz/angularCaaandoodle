@@ -4,30 +4,19 @@ import { FormsModule } from '@angular/forms'; // <-- NgModel lives here
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeroesComponent } from './heroes/heroes.component';
-import { HeroDetailComponent } from './hero-detail/hero-detail.component';
-import { MessagesComponent } from './messages/messages.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
-import { D3BaseComponent } from './d3-base/d3-base.component';
-import {TsTempModule} from './practice-demo/ts-temp/ts-temp.module';
-
+import { HeroesModule } from './heroes/heroes.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    HeroesComponent,
-    HeroDetailComponent,
-    MessagesComponent,
-    DashboardComponent,
-    D3BaseComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     FormsModule,
-    TsTempModule.forRoot()
+    HeroesModule,
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
