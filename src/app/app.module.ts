@@ -8,21 +8,23 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeroesModule } from './heroes/heroes.module';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import { CrisisListComponent }   from './crisis-list/crisis-list.component';
+import { CrisisCenterModule } from './crisis-center/crisis-center.module';
+import { ComposeMessageComponent } from './compose-message/compose-message.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     PageNotFoundComponent,
-    CrisisListComponent
+    ComposeMessageComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HeroesModule,
+    BrowserAnimationsModule,
+    CrisisCenterModule,
     AppRoutingModule,
-    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
