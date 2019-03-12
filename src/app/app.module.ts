@@ -7,10 +7,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeroesModule } from './heroes/heroes.module';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { CrisisListComponent }   from './crisis-list/crisis-list.component';
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    PageNotFoundComponent,
+    CrisisListComponent
   ],
   imports: [
     BrowserModule,
