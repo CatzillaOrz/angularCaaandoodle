@@ -1,5 +1,25 @@
 # AngularCaaandoodle
 
+At first this project is just a `angular-quick-start`, but as time goes on, it becomes more and more like an Angular playground.
+
+So far the main part of this project is about `Angular route guide` which is from [Angular.io/route/guide](https://angular.io/guide/route).It has complete code fragment from `Angular io route guide` and Compiled successfully, runs without error.
+
+If you are looking for some useful code snippets or you just want to review some part of these `route guide milestone`(the guide has six part milestones), it will be useful.
+
+- you can track the commit to see how things goes on, if you want.
+- base src/app/..
+
+## Turorial 1 Hero
+
+- check app/heroes/.. folder
+- it contain all demo expect `HTTP`
+
+## Routing & Navigation
+
+- contains six milestones, you should check `route guide one by one`
+
+## Notes
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.2.
 
 ## Development server
