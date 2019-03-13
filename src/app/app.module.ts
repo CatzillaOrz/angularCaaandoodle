@@ -12,7 +12,7 @@ import { CrisisCenterModule } from './crisis-center/crisis-center.module';
 import { ComposeMessageComponent } from './compose-message/compose-message.component';
 import { AdminModule } from './admin/admin.module';
 import { AuthModule } from './auth/auth.module';
-// import { CrisisModule } from './crisis-center/crisis.module'; //<-- never used in this
+// import { CrisisModule } from './crisis-center/crisis.module'; //<-- never used
 
 
 @NgModule({
