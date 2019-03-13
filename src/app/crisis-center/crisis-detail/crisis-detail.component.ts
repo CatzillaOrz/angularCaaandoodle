@@ -1,6 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostBinding } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Observable } from 'rxjs';
-import { DialogService } from 'src/app/dialog.service';
+
+import { Crisis }         from '../crisis';
+import { DialogService }  from '../../dialog.service';
 
 @Component({
   selector: 'app-crisis-detail',
@@ -8,13 +11,33 @@ import { DialogService } from 'src/app/dialog.service';
   styleUrls: ['./crisis-detail.component.scss']
 })
 export class CrisisDetailComponent implements OnInit {
-  crisis: any;
-  editName: any;
+  crisis: Crisis;
+  editName: string;
 
   constructor(
-    public dialogService: DialogService,
-  ) { }
-    canDeactivate(): Observable<boolean> | boolean {
+    private route: ActivatedRoute,
+    private router: Router,
+    public dialogService: DialogService
+  ) {}
+
+  ngOnInit() {
+    this.route.data
+      .subscribe((data: { crisis: Crisis }) => {
+        this.editName = data.crisis.name;
+        this.crisis = data.crisis;
+      });
+  }
+
+  cancel() {
+    this.gotoCrises();
+  }
+
+  save() {
+    this.crisis.name = this.editName;
+    this.gotoCrises();
+  }
+
+  canDeactivate(): Observable<boolean> | boolean {
     // Allow synchronous navigation (`true`) if no crisis or the crisis is unchanged
     if (!this.crisis || this.crisis.name === this.editName) {
       return true;
@@ -24,20 +47,12 @@ export class CrisisDetailComponent implements OnInit {
     return this.dialogService.confirm('Discard changes?');
   }
 
-  ngOnInit() {
-
+  gotoCrises() {
+    let crisisId = this.crisis ? this.crisis.id : null;
+    // Pass along the crisis id if available
+    // so that the CrisisListComponent can select that crisis.
+    // Add a totally useless `foo` parameter for kicks.
+    // Relative navigation back to the crises
+    this.router.navigate(['../', { id: crisisId, foo: 'foo' }], { relativeTo: this.route });
   }
-
-
-
-
-  // cancel() {
-  //   this.gotoCrises();
-  // }
-
-  // save() {
-  //   this.crisis.name = this.editName;
-  //   this.gotoCrises();
-  // }
-
 }

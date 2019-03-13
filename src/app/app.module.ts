@@ -12,6 +12,7 @@ import { CrisisCenterModule } from './crisis-center/crisis-center.module';
 import { ComposeMessageComponent } from './compose-message/compose-message.component';
 import { AdminModule } from './admin/admin.module';
 import { AuthModule } from './auth/auth.module';
+// import { CrisisModule } from './crisis-center/crisis.module'; //<-- never used in this
 
 
 @NgModule({
@@ -28,6 +29,7 @@ import { AuthModule } from './auth/auth.module';
     CrisisCenterModule,
     AdminModule,
     AuthModule,
+    // CrisisModule,
     AppRoutingModule,
   ],
   providers: [],

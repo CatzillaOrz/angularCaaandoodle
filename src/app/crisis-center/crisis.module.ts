@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
 
 import { CrisisRoutingModule } from './crisis-routing.module';
@@ -8,9 +8,9 @@ import { CrisisRoutingModule } from './crisis-routing.module';
 
 @NgModule({
   imports: [
+    FormsModule,
     CommonModule,
-    CrisisRoutingModule,
-    FormsModule
+    CrisisRoutingModule
   ],
   declarations: [
   ]
