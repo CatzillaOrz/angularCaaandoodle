@@ -8,6 +8,10 @@ const appRoutes: Routes = [
   { path: '', redirectTo: '/heroes', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent },
   {
+    path: 'admin',
+    loadChildren: './admin/admin.module#AdminModule',
+  },
+  {
     path: 'compose',
     component: ComposeMessageComponent,
     outlet: 'popup'

@@ -10,7 +10,6 @@ import { HeroesModule } from './heroes/heroes.module';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { CrisisCenterModule } from './crisis-center/crisis-center.module';
 import { ComposeMessageComponent } from './compose-message/compose-message.component';
-import { AdminModule } from './admin/admin.module';
 import { AuthModule } from './auth/auth.module';
 // import { CrisisModule } from './crisis-center/crisis.module'; //<-- never used
 
@@ -27,7 +26,6 @@ import { AuthModule } from './auth/auth.module';
     HeroesModule,
     BrowserAnimationsModule,
     CrisisCenterModule,
-    AdminModule,
     AuthModule,
     // CrisisModule,
     AppRoutingModule,
