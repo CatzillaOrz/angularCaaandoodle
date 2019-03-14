@@ -1,5 +1,9 @@
 {
-  "extends": "tslint:recommended",
+  // "extends": "tslint:recommended",
+  "extends": ["tslint-config-alloy"],
+    "linterOptions": {
+        "exclude": ["**/node_modules/**"]
+    },
   "rulesDirectory": [
     "codelyzer"
   ],

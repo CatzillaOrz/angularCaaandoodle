@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
-import { CanActivate, CanActivateChild, CanLoad, Route, UrlSegment, ActivatedRouteSnapshot, RouterStateSnapshot, UrlTree, Router, NavigationExtras } from '@angular/router';
+// tslint:disable-next-line: max-line-length
+import { CanActivate, CanActivateChild, CanLoad, Route, UrlSegment, ActivatedRouteSnapshot, RouterStateSnapshot, Router, NavigationExtras } from '@angular/router';
 import { Observable } from 'rxjs';
 import { AuthService } from './auth.service';
 
@@ -7,6 +8,7 @@ import { AuthService } from './auth.service';
   providedIn: 'root'
 })
 export class AuthGuard implements CanActivate, CanActivateChild, CanLoad {
+// tslint:disable-next-line: no-parameter-properties
   constructor(private authService: AuthService, private router: Router) {}
 
   // canActivate(
@@ -40,22 +42,29 @@ export class AuthGuard implements CanActivate, CanActivateChild, CanLoad {
     // Set our navigation extras object
     // that contains our global query params and fragment
     let navigationExtras: NavigationExtras = {
-      queryParams: { 'session_id': sessionId },
+      queryParams: { session_id: sessionId },
       fragment: 'anchor'
     };
+
 
     // Navigate to the login page with extras
     this.router.navigate(['/login'], navigationExtras);
     return false;
+  }
+
+  canLoad(route: Route): boolean {
+    let url = `/${route.path}`;
+
+    return this.checkLogin(url);
   }
   // canActivateChild(
   //   next: ActivatedRouteSnapshot,
   //   state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
   //   return true;
   // }
-  canLoad(
-    route: Route,
-    segments: UrlSegment[]): Observable<boolean> | Promise<boolean> | boolean {
-    return true;
-  }
+  // canLoad(
+  //   route: Route,
+  //   segments: UrlSegment[]): Observable<boolean> | Promise<boolean> | boolean {
+  //   return true;
+  // }
 }

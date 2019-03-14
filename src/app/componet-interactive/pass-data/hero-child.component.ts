@@ -11,5 +11,6 @@ import { Hero } from '../../heroes/hero';
 })
 export class HeroChildComponent {
   @Input() hero: Hero;
+// tslint:disable-next-line: no-input-rename
   @Input('master') masterName: string;
 }

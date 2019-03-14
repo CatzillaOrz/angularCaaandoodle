@@ -10,6 +10,7 @@ import { AuthService } from '../auth.service';
 export class LoginComponent {
   message: string;
 
+// tslint:disable-next-line: no-parameter-properties
   constructor(public authService: AuthService, public router: Router) {
     this.setMessage();
   }
