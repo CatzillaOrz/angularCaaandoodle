@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 // tslint:disable-next-line: max-line-length
-import { CanActivate, CanActivateChild, CanLoad, Route, UrlSegment, ActivatedRouteSnapshot, RouterStateSnapshot, Router, NavigationExtras } from '@angular/router';
-import { Observable } from 'rxjs';
+import { CanActivate, CanActivateChild, CanLoad, Route, ActivatedRouteSnapshot, RouterStateSnapshot, Router, NavigationExtras } from '@angular/router';
 import { AuthService } from './auth.service';
 
 @Injectable({

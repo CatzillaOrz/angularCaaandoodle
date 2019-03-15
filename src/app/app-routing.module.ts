@@ -6,8 +6,7 @@ import { AuthGuard } from './auth/auth.guard';
 
 const appRoutes: Routes = [
   /* . . . */
-  { path: '', redirectTo: '/heroes', pathMatch: 'full' },
-  { path: '**', component: PageNotFoundComponent },
+
   {
     path: 'admin',
     loadChildren: './admin/admin.module#AdminModule',
@@ -17,7 +16,9 @@ const appRoutes: Routes = [
     path: 'compose',
     component: ComposeMessageComponent,
     outlet: 'popup'
-  }
+  },
+  { path: '', redirectTo: '/heroes', pathMatch: 'full' },
+  { path: '**', component: PageNotFoundComponent },
 ];
 
 @NgModule({
