@@ -18,6 +18,10 @@ export class AdminDashboardComponent implements OnInit {
   constructor(
     // tslint:disable-next-line: no-parameter-properties
     private route: ActivatedRoute,
+    // Add the SelectivePreloadingStrategyService strategy to the
+    // AppRoutingModule providers array so it can be injected elsewhere in the
+    // app.
+
     preloadStrategy: SelectivePreloadingStrategyService
   ) {
     this.modules = preloadStrategy.preloadedModules;
