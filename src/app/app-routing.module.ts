@@ -22,6 +22,11 @@ const appRoutes: Routes = [
     loadChildren: './crisis-center/crisis-center.module#CrisisCenterModule',
     data: { preload: true }
   },
+  {
+    path: 'rxjs-cookbook',
+    loadChildren: './rxjs-cookbook/rxjs-cookbook.module#RxjsCookbookModule',
+    data: { preload: true }
+  },
   // {
   //   path: 'crisis-center',
   //   loadChildren: './crisis-center/crisis-center.module#CrisisCenterModule'
