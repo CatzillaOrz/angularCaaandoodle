@@ -12,9 +12,13 @@ import { HeroService } from '../../heroes/hero.service';
 export class HeroDetailComponent implements OnInit {
   hero: Hero;
   constructor(
+    // tslint:disable-next-line: no-parameter-properties
     private route: ActivatedRoute,
+    // tslint:disable-next-line: no-parameter-properties
     private heroService: HeroService,
+    // tslint:disable-next-line: no-parameter-properties
     private router: Router,
+    // tslint:disable-next-line: no-parameter-properties
     private location: Location
   ) {}
 
@@ -24,8 +28,7 @@ export class HeroDetailComponent implements OnInit {
 
   getHero(): void {
     const id = +this.route.snapshot.paramMap.get('id');
-    this.heroService.getHero(id)
-      .subscribe(hero => this.hero = hero);
+    this.heroService.getHero(id).subscribe(hero => (this.hero = hero));
   }
 
   // gotoHeroes(hero: Hero) {
