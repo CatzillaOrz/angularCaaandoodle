@@ -26,7 +26,14 @@ const appRoutes: Routes = [
   //   path: 'crisis-center',
   //   loadChildren: './crisis-center/crisis-center.module#CrisisCenterModule'
   // },
-  { path: '', redirectTo: '/heroes', pathMatch: 'full' },
+
+  // Before updating the app-routing.module.ts, you'll need to consider an
+  // important rule. Currently, our empty path route redirects to /heroes, which
+  // redirects to /superheroes. This won't work and is by design as the Router
+  // handles redirects once at each level of routing configuration. This
+  // prevents chaining of redirects, which can lead to endless redirect loops.
+  { path: '',   redirectTo: '/superheroes', pathMatch: 'full' },
+  // { path: '', redirectTo: '/heroes', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent }
 ];
 
