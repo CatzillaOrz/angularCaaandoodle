@@ -2,15 +2,7 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-zippy',
-  template: `
-    <div class="zippy">
-      <div (click)="toggle()">Toggle</div>
-      <div [hidden]="!visible">
-        show off
-        <!-- <ng-content></ng-content> -->
-      </div>
-    </div>
-  `,
+  templateUrl: './zippy.component.html',
   styleUrls: ['./zippy.component.scss']
 })
 export class ZippyComponent implements OnInit {

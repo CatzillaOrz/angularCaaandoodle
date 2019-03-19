@@ -1,3 +1,8 @@
-<p>
-  zippy works!
-</p>
+<div class="zippy">
+  <div (click)="toggle()">Click me to Toggle</div>
+  <div [hidden]="!visible">
+    show off
+    <!-- <ng-content></ng-content> -->
+  </div>
+</div>
+<app-async-observable-pipe></app-async-observable-pipe>
