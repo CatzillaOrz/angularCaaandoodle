@@ -11,9 +11,7 @@ export class AsyncObservablePipeComponent implements OnInit {
   // time = new Observable(observer =>
   //   setInterval(() => observer.next(new Date().toString()), 1000)
   // );
-  constructor() { }
+  constructor() {}
 
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
 }
