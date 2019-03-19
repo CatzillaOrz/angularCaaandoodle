@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable, of, from, interval, fromEvent, pipe } from 'rxjs';
 import { ajax } from 'rxjs/ajax';
-import { map, filter } from 'rxjs/operators';
+import { map, filter, catchError, retry } from 'rxjs/operators';
 
 @Component({
   selector: 'app-index',
@@ -9,10 +9,52 @@ import { map, filter } from 'rxjs/operators';
   styleUrls: ['./index.component.scss']
 })
 export class IndexComponent implements OnInit {
-  constructor() {}
+  stopwatchValue: number;
+  stopwatchValue$: Observable<number>;  // Naming conventions for observables
+
+  constructor() {
+  }
 
   ngOnInit() {
+    /* const apiData = ajax('/api/data').pipe(
+      retry(3), // Retry up to 3 times before failing
+      map(res => {
+        if (!res.response) {
+          throw new Error('Value expected!');
+        }
+        return res.response;
+      }),
+      catchError(err => of([]))
+    );
 
+    apiData.subscribe({
+      next(x) {
+        console.log('data: ', x);
+      },
+      error(err) {
+        console.log('errors already caught... will not run');
+      }
+    }); */
+    /* // Return "response" from the API. If an error happens,
+    // return an empty array.
+    const apiData = ajax('/api/data').pipe(
+      map(res => {
+        if (!res.response) {
+          throw new Error('Value expected!');
+        }
+        return res.response;
+      }),
+      catchError(err => of([]))
+    );
+
+    apiData.subscribe({
+      next(x) {
+        console.log('data: ', x);
+      },
+      error(err) {
+        console.log('errors already caught... will not run');
+      }
+    }); */
     /* const squareOdd = of(1, 2, 3, 4, 5)
       .pipe(
         filter(n => n % 2 !== 0),
@@ -40,7 +82,6 @@ export class IndexComponent implements OnInit {
     const squaredNums = squareValues(nums);
 
     squaredNums.subscribe(x => console.log(x)); */
-
     // Logs
     // 1
     // 4
@@ -367,5 +408,10 @@ export class IndexComponent implements OnInit {
     // setTimeout(() => {
     //   locationsSubscription.unsubscribe();
     // }, 10000);
+  }
+  start() {
+    this.stopwatchValue$.subscribe(num => {
+      this.stopwatchValue = num;
+    });
   }
 }
