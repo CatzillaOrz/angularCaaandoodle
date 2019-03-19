@@ -4,9 +4,10 @@ import { CommonModule } from '@angular/common';
 import { RxjsCookbookRoutingModule } from './rxjs-cookbook-routing.module';
 import { IndexComponent } from './index/index.component';
 import { MatCardModule } from '@angular/material/card';
+import { ZippyComponent } from './zippy/zippy.component';
 
 @NgModule({
-  declarations: [IndexComponent],
+  declarations: [IndexComponent, ZippyComponent],
   imports: [
     CommonModule,
     RxjsCookbookRoutingModule,

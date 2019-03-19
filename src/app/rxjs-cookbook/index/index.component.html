@@ -2,4 +2,9 @@
   <p id="my-element">
       rxjs-cookbook index works!
   </p>
+  <nav>
+    <a [routerLink]="[ '/rxjs-cookbook/zippy' ]" routerLinkActive="active">Zippy</a>
+  </nav>
 </mat-card>
+
+<router-outlet></router-outlet>
