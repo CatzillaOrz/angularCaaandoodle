@@ -27,6 +27,11 @@ const appRoutes: Routes = [
     loadChildren: './rxjs-cookbook/rxjs-cookbook.module#RxjsCookbookModule',
     data: { preload: true }
   },
+  {
+    path: 'form-cook',
+    loadChildren: './form-cook/form-cook.module#FormCookModule',
+    data: { preload: true }
+  },
   // {
   //   path: 'crisis-center',
   //   loadChildren: './crisis-center/crisis-center.module#CrisisCenterModule'
