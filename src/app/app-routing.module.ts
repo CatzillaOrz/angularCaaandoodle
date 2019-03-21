@@ -32,6 +32,11 @@ const appRoutes: Routes = [
     loadChildren: './form-cook/form-cook.module#FormCookModule',
     data: { preload: true }
   },
+  {
+    path: 'form-hero',
+    loadChildren: './form-hero/form-hero.module#FormHeroModule',
+    data: { preload: true }
+  },
   // {
   //   path: 'crisis-center',
   //   loadChildren: './crisis-center/crisis-center.module#CrisisCenterModule'

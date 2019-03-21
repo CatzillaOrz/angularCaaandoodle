@@ -11,6 +11,7 @@
   <a [routerLink]="[{ outlets: { popup: ['compose'] } }]">Contact</a>
   <a [routerLink]="['rxjs-cookbook']" routerLinkActive="active">rxjs-cookbook</a>
   <a [routerLink]="['form-cook']" routerLinkActive="active">form-cook</a>
+  <a [routerLink]="['form-hero']" routerLinkActive="active">form-hero</a>
 </nav>
 <div [@routeAnimation]="getAnimationData(routerOutlet)">
   <router-outlet #routerOutlet="outlet"></router-outlet>
