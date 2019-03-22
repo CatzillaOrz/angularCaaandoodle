@@ -79,7 +79,7 @@ use    `cd my-app` and `ng serve --open`
 other :
 
 `ng serve`
-  
+
   `npm start`这个命令会在“监听”模式下运行TypeScript编译器，当代码变化时，它会自动重新编译。 同时，该命令还会在浏览器中启动该应用，并且当代码变化时刷新浏览器。
 
 ## tips
@@ -123,6 +123,23 @@ other :
   ## do it only when you stuck caused by some download slow
   sudo npm i --unsafe-perm --verbose -g @angular/cli
   ```
+
+## Useful command
+
+  ```bash
+  ps -ef | grep "ng serve"
+  ```
+
+- What does “ps -ef|grep processname” mean?
+  - means: look for lines containing ``processname`` in a detailed overview/snapshot of all current processes, and display those lines
+
+- how to end ng serve or firebase serve
+
+  ```bash
+  kill -9 <PID>
+  ```
+
+- It is possible that the kill -1 does not work, in such a case, you will need to use the -9 argument to clear the process from your system. Use the following command:
 
 ## Material
 

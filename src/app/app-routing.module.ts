@@ -37,6 +37,11 @@ const appRoutes: Routes = [
     loadChildren: './form-hero/form-hero.module#FormHeroModule',
     data: { preload: true }
   },
+  {
+    path: 'hero-form',
+    loadChildren: './hero-form/hero-form.module#HeroFormModule',
+    data: { preload: true }
+  },
   // {
   //   path: 'crisis-center',
   //   loadChildren: './crisis-center/crisis-center.module#CrisisCenterModule'
