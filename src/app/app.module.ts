@@ -12,6 +12,9 @@ import { ComposeMessageComponent } from './compose-message/compose-message.compo
 import { AppRoutingModule } from './app-routing.module';
 import { HeroesModule } from './heroes/heroes.module';
 import { AuthModule } from './auth/auth.module';
+import { ForbiddenValidatorDirective } from './shared/forbidden-name.directive';
+import { IdentityRevealedValidatorDirective } from './shared/identity-revealed.directive';
+import { UniqueAlterEgoValidatorDirective } from './shared/alter-ego.directive';
 
 @NgModule({
   imports: [
@@ -22,7 +25,14 @@ import { AuthModule } from './auth/auth.module';
     AuthModule,
     AppRoutingModule
   ],
-  declarations: [AppComponent, ComposeMessageComponent, PageNotFoundComponent],
+  declarations: [
+    AppComponent,
+    ComposeMessageComponent,
+    PageNotFoundComponent,
+    ForbiddenValidatorDirective,
+    IdentityRevealedValidatorDirective,
+    UniqueAlterEgoValidatorDirective
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {
