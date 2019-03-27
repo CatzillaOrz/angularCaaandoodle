@@ -64,7 +64,7 @@
           "options": {
             "browserTarget": "angularCaaandoodle:build",
             "host": "localhost",
-            "port": 4201
+            "port": 4200
           },
           "configurations": {
             "production": {
