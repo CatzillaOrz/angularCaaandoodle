@@ -6,6 +6,8 @@ import { IndexComponent } from './index/index.component';
 import { MatCardModule } from '@angular/material/card';
 import { ZippyComponent } from './zippy/zippy.component';
 import { AsyncObservablePipeComponent } from './async-observable-pipe/async-observable-pipe.component';
+import { MatDialogModule } from '@angular/material/dialog';
+
 
 @NgModule({
   declarations: [IndexComponent, ZippyComponent, AsyncObservablePipeComponent],
@@ -13,22 +15,7 @@ import { AsyncObservablePipeComponent } from './async-observable-pipe/async-obse
     CommonModule,
     RxjsCookbookRoutingModule,
     MatCardModule,
-    // MatGridListModule,
-    // MatButtonModule,
-    // MatSidenavModule,
-    // MatExpansionModule,
-    // MatFormFieldModule,
-    // MatInputModule,
-    // MatToolbarModule,
-    // MatMenuModule,
-    // MatDialogModule,
-    // MatSelectModule,
-    // MatTableModule,
-    // MatCheckboxModule,
-    // MatListModule,
-    // MatListModule,
-    // MatTabsModule,
-    // MatRadioModule
+    MatDialogModule
   ]
 })
 export class RxjsCookbookModule { }

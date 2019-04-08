@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable, of, from, interval, fromEvent, pipe } from 'rxjs';
-import { ajax } from 'rxjs/ajax';
-import { map, filter, catchError, retry } from 'rxjs/operators';
+import { AppConfirmationService } from '../app-confirmation.service';
+
+
 
 @Component({
   selector: 'app-index',
@@ -12,10 +13,20 @@ export class IndexComponent implements OnInit {
   stopwatchValue: number;
   stopwatchValue$: Observable<number>;  // Naming conventions for observables
 
-  constructor() {
+  // tslint:disable-next-line: no-parameter-properties
+  constructor(private confirmService: AppConfirmationService) {
   }
 
+
   ngOnInit() {
+    // this.confirmService.openDialog();
+    // const dialogRef = this.confirmService.openDialog();
+    // dialogRef.afterClosed().subscribe(result => {
+    //   console.log('The dialog was closed');
+    // });
+    // dialogRef.afterClosed().subscribe(result => {
+    //   console.log('The dialog was closed');
+    // });
     /* const apiData = ajax('/api/data').pipe(
       retry(3), // Retry up to 3 times before failing
       map(res => {
