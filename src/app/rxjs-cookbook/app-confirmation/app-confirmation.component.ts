@@ -24,6 +24,8 @@ export class AppConfirmationComponent implements OnInit {
 
 }
 export interface DialogData {
-  animal: string;
-  name: string;
+  title: string;
+  message: string;
+  btnOkText: string;
+  btnCancelText: string;
 }

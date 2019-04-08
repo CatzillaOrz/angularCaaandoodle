@@ -18,11 +18,15 @@ export class IndexComponent implements OnInit {
   }
 
   openDialog() {
-    const dialogRef = this.confirmService.openDialog();
-    dialogRef.afterClosed().subscribe(result => {
-      console.log('The dialog was closed');
-      console.log(result);
-    });
+    // const dialogRef = this.confirmService.openDialog();
+    // dialogRef.afterClosed().subscribe(result => {
+    //   console.log('The dialog was closed');
+    //   console.log(result);
+    // });
+    this.confirmService.openDialog(this.delete, '提示', '是否删除', '确定', '取消');
+  }
+  delete() {
+    console.log('deleted success!');
   }
   ngOnInit() {
     // this.confirmService.openDialog();

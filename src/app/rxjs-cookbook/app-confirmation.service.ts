@@ -7,17 +7,25 @@ import { AppConfirmationComponent } from './app-confirmation/app-confirmation.co
   providedIn: 'root'
 })
 export class AppConfirmationService {
-// tslint:disable-next-line: no-parameter-properties
+  // tslint:disable-next-line: no-parameter-properties
   constructor(public dialog: MatDialog) { }
 
-  openDialog(): MatDialogRef<AppConfirmationComponent, any> {
+  openDialog(callback: Function, title: string,
+    message: string,
+    btnOkText: string = 'OK',
+    btnCancelText: string = 'Cancel'): void {
     const dialogRef = this.dialog.open(AppConfirmationComponent, {
-      width: '250px'
+      width: '250px',
+      data: {title, message, btnOkText, btnCancelText}
     });
 
-    // dialogRef.afterClosed().subscribe(result => {
-    //   console.log('The dialog was closed');
-    // });
-    return dialogRef;
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+      console.log(result);
+      if (result) {
+        callback();
+      }
+    });
+    // return dialogRef;
   }
 }
