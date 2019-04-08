@@ -17,16 +17,15 @@ export class IndexComponent implements OnInit {
   constructor(private confirmService: AppConfirmationService) {
   }
 
-
+  openDialog() {
+    const dialogRef = this.confirmService.openDialog();
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+      console.log(result);
+    });
+  }
   ngOnInit() {
     // this.confirmService.openDialog();
-    // const dialogRef = this.confirmService.openDialog();
-    // dialogRef.afterClosed().subscribe(result => {
-    //   console.log('The dialog was closed');
-    // });
-    // dialogRef.afterClosed().subscribe(result => {
-    //   console.log('The dialog was closed');
-    // });
     /* const apiData = ajax('/api/data').pipe(
       retry(3), // Retry up to 3 times before failing
       map(res => {

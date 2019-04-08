@@ -5,6 +5,10 @@
   <nav>
     <a [routerLink]="[ '/rxjs-cookbook/zippy' ]" routerLinkActive="active">Zippy</a>
   </nav>
+  <br>
+  <h1>抽离删除提示，作为公共服务的例子：</h1>
+  <h2>App-confirmation-Service</h2>
+  <button (click)="openDialog()">是否删除？</button>
 </mat-card>
 
 <router-outlet></router-outlet>
