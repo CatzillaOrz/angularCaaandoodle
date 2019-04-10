@@ -2,10 +2,8 @@ import { Directive, OnInit, OnChanges, Input, Self } from '@angular/core';
 import { NgStyle } from '@angular/common';
 
 @Directive({
-  // tslint:disable-next-line: directive-selector
   selector: '[mj-aside]',
-  // tslint:disable-next-line: use-host-property-decorator
-  host: { clas: 'mj-aside' },
+  host: { class: 'mj-aside' },
   providers: [NgStyle]
 })
 export class AsideDirective implements OnInit, OnChanges {
