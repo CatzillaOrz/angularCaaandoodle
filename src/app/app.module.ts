@@ -16,6 +16,7 @@ import { ForbiddenValidatorDirective } from './shared/forbidden-name.directive';
 import { IdentityRevealedValidatorDirective } from './shared/identity-revealed.directive';
 import { UniqueAlterEgoValidatorDirective } from './shared/alter-ego.directive';
 import { FooterDirective } from './components/container/directives/footer.directive';
+import { HeaderDirective } from './components/container/directives/header.directive';
 
 @NgModule({
   imports: [
@@ -33,7 +34,8 @@ import { FooterDirective } from './components/container/directives/footer.direct
     ForbiddenValidatorDirective,
     IdentityRevealedValidatorDirective,
     UniqueAlterEgoValidatorDirective,
-    FooterDirective
+    FooterDirective,
+    HeaderDirective
   ],
   bootstrap: [AppComponent]
 })
