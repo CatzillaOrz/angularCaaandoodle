@@ -15,6 +15,7 @@ import { AuthModule } from './auth/auth.module';
 import { ForbiddenValidatorDirective } from './shared/forbidden-name.directive';
 import { IdentityRevealedValidatorDirective } from './shared/identity-revealed.directive';
 import { UniqueAlterEgoValidatorDirective } from './shared/alter-ego.directive';
+import { FooterDirective } from './components/container/directives/footer.directive';
 
 @NgModule({
   imports: [
@@ -31,7 +32,8 @@ import { UniqueAlterEgoValidatorDirective } from './shared/alter-ego.directive';
     PageNotFoundComponent,
     ForbiddenValidatorDirective,
     IdentityRevealedValidatorDirective,
-    UniqueAlterEgoValidatorDirective
+    UniqueAlterEgoValidatorDirective,
+    FooterDirective
   ],
   bootstrap: [AppComponent]
 })
