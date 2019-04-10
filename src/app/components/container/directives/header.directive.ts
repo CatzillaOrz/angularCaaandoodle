@@ -22,6 +22,7 @@ export class HeaderDirective implements OnChanges, OnInit{
     this.ngStyle.ngDoCheck();
   }
   ngOnInit(): void {
+    this.doCheck();
   }
 
 
