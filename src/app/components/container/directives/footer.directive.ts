@@ -16,6 +16,7 @@ export class FooterDirective implements OnChanges, OnInit {
     this.doCheck();
   }
   ngOnInit(): void {
+    this.doCheck();
   }
   doCheck() {
     this.hostStyle = {
