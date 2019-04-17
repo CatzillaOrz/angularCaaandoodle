@@ -6,7 +6,7 @@ import { Directive, Input, OnChanges, OnInit, Self } from '@angular/core';
   providers: [NgStyle],
   host: { class: 'mj-footer' }
 })
-export class FooterDirective implements OnChanges, OnInit {
+export class MjFooterDirective implements OnChanges, OnInit {
 
   @Input() height: string = '60px';
   private hostStyle: { [key: string]: string };

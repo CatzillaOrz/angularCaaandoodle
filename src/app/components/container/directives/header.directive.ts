@@ -6,7 +6,7 @@ import { Directive, OnChanges, OnInit, Input, Self } from '@angular/core';
   providers: [NgStyle],
   host: {class: 'mj-header'}
 })
-export class HeaderDirective implements OnChanges, OnInit{
+export class MjHeaderDirective implements OnChanges, OnInit{
   @Input() height: string = '60px';
   constructor(@Self() private ngStyle: NgStyle) { }
   private hostStyle: {[key: string]: string};

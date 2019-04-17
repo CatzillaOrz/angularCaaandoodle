@@ -6,7 +6,7 @@ import { NgStyle } from '@angular/common';
   host: { class: 'mj-aside' },
   providers: [NgStyle]
 })
-export class AsideDirective implements OnInit, OnChanges {
+export class MjAsideDirective implements OnInit, OnChanges {
   @Input() width: string = '300px';
   private hostStyles: { [key: string]: string };
   // tslint:disable-next-line: no-parameter-properties
