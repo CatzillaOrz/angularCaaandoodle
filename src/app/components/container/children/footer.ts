@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'mj-aside',
+  selector: 'mj-footer',
   template: `
-  <mj-aside></mj-aside>
+    <mj-footer></mj-footer>
   `,
 })
-export class MjAsideComponent implements OnInit {
+export class MjFooterComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void { }
