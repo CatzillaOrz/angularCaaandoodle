@@ -1,0 +1,59 @@
+doctype html
+html(lang="en")
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/google.css')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='/stylesheets/bootstrap.css')
+    link(rel='stylesheet', href='/stylesheets/font-awesome.css')
+    link(rel='stylesheet', href='/stylesheets/swiper.css')
+    link(rel='icon', href='/images/favicon.ico',type='image/x-icon')
+    meta(name='description',content='Latest updates and statistic charts')
+    meta(charset="utf-8")
+    meta(name="viewport",content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no")
+  body
+    //-头部信息
+    div.qloud-page-top.qloud-clearfix
+      img(src=logoUrl class="qloud-top-img")
+      a(href="/",class="qloud-al-logo qloud-clearfix") #{logName}
+      div.user-profile.qloud-clearfix
+        div.al-user-profile
+          li(id='liuser',class='qloud-liuser')
+            a.dropdown-toggle.qloud-userlogo
+              img(src=userLogo, id="portrait-image", style="width:45px;height:45px;")
+            ul.dropdown-menu.dropdown-primary(id="showuserlist")
+              li.dropdown-item
+                a(href="#/auth/personal") 个人主页
+              li.dropdown-item
+                a(id="logout") 退出登陆
+                //i.fa.fa-power-off
+                //a(class='qloud-signout',onclick="logout()") 退出
+    -if(tabls.length>0){
+        .swiper-container
+          div(class='swiper-wrapper',id='tabcontnent')
+            - for (var i = 0; i < tabls.length; i++) {
+                .swiper-slide.swiper-no-swiping
+                  a(href=tabls[i].url)=tabls[i].name
+            - }
+        button(class='swiperButton swiper-button-next')
+          i.fa.fa-arrow-right
+        button(class='swiperButton swiper-button-prev')
+          i.fa.fa-arrow-left
+    -}
+    //-siderbar
+    aside.qloud-al-sidebar
+      ul(class="qloud-al-sidebar-list",id="al-sidebar-list")
+        - for (var i = 0; i < pluginls.length; i++) {
+              li(class=pluginls[i].class)
+                  a(class="qloud-al-sidebar-list-link",href=pluginls[i].url,title=pluginls[i].name)
+                    i.fa.fa-bookmark
+                    span=pluginls[i].name
+        - }
+    div.qloud-al-main
+      div.qloud-al-content
+        include index.html
+        i(class='fa fa-angle-up qloud-ba-back-top qloud-ba-back-top',title='回到顶部' ,onclick='scrollToTop()',id="showBackToTop")
+            block content
+    script(src='/javascripts/swiper.js')
+    script(src='/javascripts/socket.io.js')
+    script(src='/javascripts/base.js')
