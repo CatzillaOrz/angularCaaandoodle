@@ -126,6 +126,8 @@ other :
 
 ## Useful command
 
+查看及结束ng serve占用的进程
+
   ```bash
   ps -ef | grep "ng serve"
   ```
@@ -138,6 +140,18 @@ other :
   ```bash
   kill -9 <PID>
   ```
+
+查看及杀死指定端口：
+
+- 查看进程占用
+
+- lsof -i tcp:8080
+
+- 该命令会显示占用8080端口的进程，有其 pid ,可以通过pid关掉该进程
+
+- 杀死进程
+
+kill pid
 
 - It is possible that the kill -1 does not work, in such a case, you will need to use the -9 argument to clear the process from your system. Use the following command:
 
