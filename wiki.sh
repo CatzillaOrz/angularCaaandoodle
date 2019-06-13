@@ -1,9 +1,9 @@
-imageTag: "latest144"
+imageTag: "latest149"
 env:
     DISCOVERY_INGRESS: "qloudkernel.service.sd"
     DISCOVERY_CLUSTER: "qloudkernel.default"
     SERVICE_INGRESS: "qloudwiki4d.service.sd"
-    SERVICE_NAME: "qloudwiki.pditdop"
+    SERVICE_NAME: "qloudwiki4d"
     SERVER_OPTS: "-Xms512M -Xmx8192M"
     DISCOVERY_SSL: "true"
 ingressAddns: false
