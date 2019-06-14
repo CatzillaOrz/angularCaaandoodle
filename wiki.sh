@@ -1,4 +1,4 @@
-imageTag: "latest149"
+imageTag: "latest143"
 env:
     DISCOVERY_INGRESS: "qloudkernel.service.sd"
     DISCOVERY_CLUSTER: "qloudkernel.default"
@@ -20,9 +20,8 @@ ingressTls:
   - host: qloudwiki4d
     domain: service.sd
 
-
-#
-imageTag: "latest68"
+# init config
+imageTag: "latest70"
 env:
   DISCOVERY_INGRESS: "qloudkernel.service.sd"
   DISCOVERY_CLUSTER: "qloudkernel.default"
@@ -35,4 +34,6 @@ env:
   MONGODB_SERVICE_NAME:  "mongodb.pditdapps"
   DATABASE_USERNAME: "root"
   DATABASE_PASSWORD: "QloudMongoDB2019"
-  DISCOVERY_SSL: "true"
+  GIT_USERNAME: "catzillagcst"
+  GIT_PASSWORD: "********"
+
